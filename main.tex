@@ -1,0 +1,118 @@
+\documentclass[12pt,letterpaper, oneside]{book}
+%openright
+
+%\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{color,soul}
+
+
+\usepackage{geometry}
+\geometry{letterpaper,left=40mm,right=25mm,top=30mm,bottom=30mm}
+\renewcommand{\baselinestretch}{2.0} 
+
+
+\usepackage{tabu,longtable}
+\usepackage{mfirstuc}
+\MFUnocap{of}
+\MFUnocap{the}
+
+%% Abbreviations
+%\usepackage[hyperref = true, only-used = false]{acro}
+
+\usepackage{lipsum}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\centering\Huge\bfseries}
+  {}%here \thechapter to recover number
+{0em} %separation btw number and title
+  {\MakeUppercase}
+  []
+ \titlespacing{\chapter}{0pt}{-2cm}{2cm}
+ %\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{5pt plus 2pt minus 2pt}
+%\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+%\titleformat{\section}
+%{\normalfont\normalsize\bfseries}{\thesection}{1em}{}
+ 
+ 
+%no header
+\renewcommand{\chaptermark}[1]{}
+\renewcommand{\sectionmark}[1]{}
+\makeatletter
+\renewcommand{\@mkboth}[2]{}
+\makeatother
+
+\usepackage{multicol}
+
+\usepackage[style=authoryear-ibid,sorting=nyt,sortcites, maxbibnames=1000,backend=biber,uniquename=false,uniquelist=false,maxcitenames=2]{biblatex}
+%
+%,
+\addbibresource{./MyBibliography.bib}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+%\renewcommand*{\bibfont}{\footnotesize}
+
+
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{wasysym}
+\usepackage{verbatim}
+\usepackage{setspace}
+
+%Image-related packages
+
+\usepackage{graphicx}
+\graphicspath{ {./Thesis/Manuscript/Images/} }
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\usepackage{float}
+
+%% caption format
+%\usepackage[format=plain,labelfont={bf,it},textfont=it]{caption}
+\usepackage[format=plain,labelfont={bf}]{caption}
+
+%to describe equations below
+\usepackage{tabularx} 
+\newenvironment{conditions} 
+  {\par\vspace{\abovedisplayskip}\noindent
+   \tabularx{\columnwidth}{>{$}l<{$} @{${}={}$} >{\raggedright\arraybackslash}X}}
+  {\endtabularx\par\vspace{\belowdisplayskip}}
+
+\usepackage{tikz}
+\usetikzlibrary{er,positioning}
+
+%% lines
+\usepackage{lineno}
+\linenumbers
+
+%% quotes
+\usepackage{csquotes}
+\usepackage{dirtytalk}
+
+
+\usepackage[draft]{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\urlstyle{same}
+
+
+
+\title{My Thesis}
+\author{Victor Manuel Hidalgo}
+\date{}
+
+
+\begin{document}
+
+\input{Thesis/Manuscript/Manuscript}
+
+\end{document}
