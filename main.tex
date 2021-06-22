@@ -49,6 +49,8 @@
 %,
 \addbibresource{./MyBibliography.bib}
 \renewcommand*{\nameyeardelim}{\addcomma\space}
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
 %\renewcommand*{\bibfont}{\footnotesize}
 
 
